@@ -1,6 +1,6 @@
 import logging
 
-from logger.settings import LOGGER_CONFIGS, TEMP_DIR
+from src.settings.defaultSettings import LOGGER_CONFIGS, TEMP_DIR
 
 
 class Log():
