@@ -1,10 +1,7 @@
 import logging
-import dotenv
-import sys
 import os
 
-# Only used for development
-dotenv.load_dotenv()
+from logger.handlers.custom import CustomStreamHandler
 
 ### DATETIME FORMATS ###
 TIME_FORMAT = "%H:%M:%S.%f"
@@ -23,12 +20,14 @@ __DIRECTORIES = [
 for dir in __DIRECTORIES:
     if not os.path.isdir(dir): os.mkdir(dir)
 
+#### LOGGER COLOURS ####
+ENABLE_LOGGER_COLOURS = True
 
 #### LOGGER SETTINGS ####
 LOGGER_CONFIGS = {
     # Make logs pretty
     "datefmt": DT_FORMAT_SIMPLE,
-    "format" : '{asctime}:{levelname}:{name} >>> {message}',
+    "format" : '{asctime}:{levelname:<9}:{name} >>> {message}',
     "style" : '{',
     # Where to log
     "handlers" : [
@@ -36,7 +35,7 @@ LOGGER_CONFIGS = {
             filename = TEMP_DIR + "logs.log",
             mode = 'w'# always overwrite, no need to have GB of logs
         ),
-        logging.StreamHandler(sys.stdout)
+        CustomStreamHandler(ENABLE_LOGGER_COLOURS)
     ],
     # What to log
     # "level" : "NOTSET" if DEVELOPMENT_MODE else "INFO"

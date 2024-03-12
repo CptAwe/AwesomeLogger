@@ -1,7 +1,9 @@
 import logging
 
-from logger.settings import LOGGER_CONFIGS, TEMP_DIR
-
+from logger.settings import (
+    LOGGER_CONFIGS,
+    TEMP_DIR
+)
 
 class Log():
     '''
