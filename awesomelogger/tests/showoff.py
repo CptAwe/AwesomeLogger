@@ -1,6 +1,3 @@
-import sys
-print(sys.path)
-
 from src.awesomelogger.customLogger import Log
 
 __logger = Log(

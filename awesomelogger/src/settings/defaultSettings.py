@@ -28,7 +28,7 @@ for dir in __DIRECTORIES:
 LOGGER_CONFIGS = {
     # Make logs pretty
     "datefmt": DT_FORMAT_SIMPLE,
-    "format" : '{asctime}:{levelname}:{name} >>> {message}',
+    "format" : '{asctime}:{levelname:<9}:{name} >>> {message}',
     "style" : '{',
     # Where to log
     "handlers" : [
