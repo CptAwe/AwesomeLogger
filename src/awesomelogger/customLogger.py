@@ -1,6 +1,6 @@
 import logging
 
-from .src.settings.defaultSettings import LOGGER_CONFIGS, TEMP_DIR
+from settings.defaultSettings import LOGGER_CONFIGS, TEMP_DIR
 
 
 class Log():
@@ -8,7 +8,7 @@ class Log():
     A generic logger
     '''
 
-    def __init__(self, name: str, logging_level: str = LOGGER_CONFIGS["level"], specific_log_file: str = None):
+    def __init__(self, name: str, logging_level: str = LOGGER_CONFIGS["level"], specific_log_file: str = ""):
 
         self.logger = logging.Logger(name, logging_level)
 

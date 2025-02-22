@@ -1,0 +1,14 @@
+[project]
+name = "awesomelogger"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "cptawe", email = "georgepapoulias@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
