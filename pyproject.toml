@@ -1,13 +1,15 @@
 [project]
 name = "awesomelogger"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simple wrapper on top of the builtin python logging module"
 readme = "README.md"
 authors = [
     { name = "cptawe", email = "georgepapoulias@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.0.1",
+]
 
 [build-system]
 requires = ["hatchling"]

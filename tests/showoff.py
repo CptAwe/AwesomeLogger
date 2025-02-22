@@ -1,4 +1,4 @@
-from src.awesomelogger.customLogger import Log
+from src.awesomelogger import Log
 
 __logger = Log(
     name=__name__,
