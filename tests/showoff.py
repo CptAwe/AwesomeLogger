@@ -1,19 +1,17 @@
-from src.awesomelogger import Log
+from awesomelogger import Log
+from unittest import TestCase
 
-__logger = Log(
-    name=__name__,
-    logging_level="INFO"
-).logger
+class AwesomeLoggerTester(TestCase):
 
-def main():
+    __logger = Log(
+        name=__name__,
+        logging_level="INFO"
+    ).logger
 
-    __logger.debug("Debug message")
-    __logger.info("Info message")
-    __logger.warning("Warning message")
-    __logger.error("Error message")
-    __logger.critical("Critical message")
+    def test_all_messages(self):
 
-
-if __name__ == "__main__":
-
-    main()
+        self.__logger.debug("Debug message")
+        self.__logger.info("Info message")
+        self.__logger.warning("Warning message")
+        self.__logger.error("Error message")
+        self.__logger.critical("Critical message")

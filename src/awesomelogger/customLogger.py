@@ -46,7 +46,7 @@ class Log():
         for hndlr in self.logger.handlers:
             hndlr.setFormatter(formatter)
 
-        self.logger.info(f"A new logger has been initialised: {self.logger.name}")
+        self.logger.debug(f"A new logger has been initialised: {self.logger.name}")
     
     # debug()
     # def debug(self, *args, **kwargs):

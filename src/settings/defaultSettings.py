@@ -36,7 +36,7 @@ LOGGER_CONFIGS = {
             filename = TEMP_DIR + "logs.log",
             mode = 'w'# always overwrite, no need to have GB of logs
         ),
-        logging.StreamHandler(sys.stdout)
+        logging.StreamHandler(sys.stdout),
     ],
     # What to log
     # "level" : "NOTSET" if DEVELOPMENT_MODE else "INFO"
